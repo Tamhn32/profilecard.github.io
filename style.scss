@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+body {
+    font: 18px "Nunito", sans-serif;
+    color: rgb(41, 41, 86);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: rgb(255, 255, 255);
+        background-size: cover;
+    }
+}
+
+.profile-card{
+    box-shadow: 0 18px 200px -60px rgb(0, 0, 0);
+    border-radius: 50px;
+    width: 600px;
+    position: relative;
+    backdrop-filter: blur(15px);
+    border: 2px solid #f1f1f1;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media screen and (max-width: 768px){
+        width: auto;
+    }
+    img {
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        box-shadow: 0 10px 60px -10px rgba(13,28,39, .5);
+    }
+    
+    &_desc {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h1{
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            & + div {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &_info {
+        p {
+            text-align: center;
+        } 
+    }
+
+    &_social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        a {
+            display:  inline-flex;
+            width: 55px;
+            height: 55px;
+            margin: 15px;
+            border-radius: 40%;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            position: relative;
+            flex-shrink: 0;
+            transition: all .2s;
+
+            @media screen and (max-width 768px) {
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+            }
+
+            @media screen and (min-width: 768px) {
+                &:hover {
+                    transform: scale(1.2) translate(-5px);
+                }
+            }
+
+            &.github {
+                background: linear-gradient(45deg, #f912da, #00787d);
+                box-shadow: 0, 4px 30px rgba(232, 4, 253, 0.5)
+            }
+
+            &.li {
+                background: linear-gradient(45deg, #1da1f2, #0e71c8);
+                box-shadow: 0, 4px 30px rgba(13, 89, 241, 0.5)
+            }
+
+            &.inst {
+                background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                box-shadow: 0, 4px 30px rgba(120, 64, 190, 0.6);
+            }
+
+            &.facebook {
+                background: linear-gradient(45deg, #3b5998, #608ae6);
+                box-shadow: 0, 4px 30px rgba(13, 89, 241, 0.5);
+            } 
+        }
+
+    }
+    &_actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        @media screen and (max-width: 567px)  {
+            flex-direction: column;
+            gap: 1.5 rem;
+        }
+
+        &>button {
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+            padding: 15px 0;
+            min-width: 250px;
+            border-radius: 50px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all .2s;
+
+            @media screen and (max-width: 768px) {
+                min-width: 170px;
+            }
+
+            @media screen and (max-width: 576px) {
+                min-width: inherit;
+                width: 100%;
+                max-width: 350px;               
+            }
+
+            @media screen and (min-width: 576px) {
+                &:hover {
+                    transform: translate(-5px);
+                }
+            }
+
+            &.blue {
+                background: linear-gradient(45deg, #234181, #18284b);
+                box-shadow: 0 4px 30px rgb(38, 34, 111);
+                &:hover {
+                    box-shadow: 0 7px 30px rgba(120, 64, 190, 0.6);
+                }
+            }
+
+            &.orange{
+                background: linear-gradient(45deg, #234181, #18284b);
+                box-shadow: 0 4px 30px rgb(38, 34, 111); 
+
+                &:hover {
+                    box-shadow: 0 7px 30px rgba(120, 64, 190, 0.6);
+                }
+            }
+
+        }
+    }
+ }
+
+
+ 
+ 
